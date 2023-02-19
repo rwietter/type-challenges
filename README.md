@@ -29,8 +29,7 @@ type MyType<T> = {
 que estão presos dentro de diferentes tipos de estruturas!
 
 ```ts
-type TParams<F extends (...args: any[]) => any> =
-  F extends ((...args: infer A) => any) ? A : never
+type ObjectInfer<O> = O extends { a: Infer A } ? A : never
 ```
 
 ### IN
